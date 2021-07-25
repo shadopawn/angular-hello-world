@@ -22,10 +22,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('angular-hello-world');
   });
 
-  it('should render title', () => {
+  it('should have app button', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-hello-world app is running!');
+    expect(compiled.querySelector('app-button')).toBeTruthy();
   });
 });
